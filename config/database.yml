@@ -81,7 +81,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: back_my_idea_production
-  username: back_my_idea
-  password: <%= ENV['BACK_MY_IDEA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
