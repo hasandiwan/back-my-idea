@@ -20,6 +20,8 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: pgsql
+  password: 94920
 
 development:
   <<: *default
@@ -79,7 +81,4 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: back_my_idea_production
-  username: back_my_idea
-  password: <%= ENV['BACK_MY_IDEA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
